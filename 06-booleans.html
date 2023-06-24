@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Booleans</title>
+  </head>
+  <body>
+    <script>
+      true
+      false
+      
+      console.log(3 > 5 ); // console says false
+
+      console.log(3 > 5 - 5); // console says true
+
+      console.log( 5 === '5.00'); // console says false
+
+      const age = 15;
+
+      if (true) {
+        console.log('hello');
+      } else {
+        console.log('else');
+      }
+
+      if (age >= 16) {
+        console.log('you can drive');
+      } else if (age >= 14) {
+        console.log('almost there');
+      } else {
+        console.log('you can not drive');
+      }
+
+
+      // && - and operator
+      // || - or operator
+      // ! - not operator. flips the boolean value
+      
+      // if statements work not only with false and true values. They also work with falsy and truthy values.
+
+      // console.log(!0); is true
+      
+      // falsy values are - false, 0, NaN (not a number), undefined, null
+      // truthy values are everything else.
+      // so if you do something like if(5){code here} the code will run because 5 is a truthy number
+      // if(cartQuantity){code} the code will not run if cartQuantity is 0
+
+
+      //TURNARY OPERATOR (it is like if else statement)
+      //TURNARY OPERATOR (it is like if else statement)
+      //TURNARY OPERATOR (it is like if else statement)
+      const result = true ? 'truthy' : 'falsy';
+      console.log(result); // console says 'truthy' because of true
+
+
+
+      //Guard operator
+      false && console.log('hello'); // console would not say anything
+      
+      const message = false && 'hello'; 
+      console.log(message); // console would say false.
+      
+      const message2 = 5 && 'hello'; 
+      console.log(message2); // console would say hello because 5 is a truthy value
+
+
+
+      const currency = undefined || 'USD';
+      consloe.log(currency); // console would say USD
+
+    </script>
+  </body>
+</html>

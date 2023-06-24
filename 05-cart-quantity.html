@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Cart Quantity</title>
+  </head>
+  <body>
+
+    <button onclick="
+      console.log(`Cart Quantity: ${cartQuantity}
+      `);
+    ">Show Quantity</button>
+
+    <button onclick="
+      cartQuantity++; //this is the same as cartQuantity=cartQuantity+1;
+      console.log(`Cart Quantity: ${cartQuantity}
+      `);
+    ">Add to Cart</button>
+
+    <button onclick="
+      cartQuantity=cartQuantity+2; //this is equivalent to cartQuantity += 2;
+      // we also have += -= *= /= ++ --
+      // we also have += -= *= /= ++ --
+      console.log(`Cart Quantity: ${cartQuantity}
+      `);
+    ">+2</button>
+
+    <button onclick="
+      cartQuantity += 3;
+      console.log(`Cart Quantity: ${cartQuantity}
+      `);
+    ">+3</button>
+
+    <button onclick="
+      cartQuantity=0;
+      console.log('Cart was reset.')
+      console.log(`Cart Quantity: ${cartQuantity}
+      `);
+    ">Reset Cart</button>
+
+    <script>
+      let cartQuantity = 0; //camelCase convertion is this type of naming variables. Default for JavaScript
+      // PascaleCase convention - this is where we capitalize first word as well as other once
+      //kebab-case convention - all lowercase and - to separate the words. doesnt work in JavaScript. This is for HTML & CSS and for file names
+      //snake_case is also a convention
+
+      const variable2 = 3;
+
+    </script>
+  </body>
+</html>

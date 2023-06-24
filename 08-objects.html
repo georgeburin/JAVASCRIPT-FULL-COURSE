@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Objects</title>
+    <!--WE ARE GOING TO USE JAVASCRIPT OBJECTS HERE-->
+  </head>
+  <body>
+    <script>
+      /*
+      //This is a JAVASCRIPT OBJECT NOT JSON 
+      //JSON doesnt have functions. uses "" only. any other language can uderstand it
+      //Javascript objects are only for Javascript
+      const product = {
+        name: 'socks',
+        price: 1090
+      };
+      console.log(product);
+      console.log(product.name);
+      console.log(product.price);
+
+      product.name = 'cotton socks';
+      console.log(product);
+
+      product.newProperty = true;
+      console.log(product);
+
+      delete product.newProperty;
+      console.log(product);
+      */
+
+
+
+
+      /*
+      const product2 = {
+        name: 'shirt',
+        'delivery-time': '1 day',
+        // in this case delivery time is a string. Has to be because otherwise javascript will think its a minus sign.
+        rating: {
+          stars: 4.5,
+          count: 87
+        },
+        //in this case we have an object inside an object. 
+        fun: function function1() {
+          console.log('function inside object');
+        }
+        // this is a function inside the object. THIS IS A METHOD
+      };
+      console.log(product2);
+      console.log(product2.name);   //console says shirt. dot notation
+      console.log(product2['name']);  //console says shirt. bracket notation
+      console.log(product2['delivery-time']);  //do bracket notation because Javascript thinks there is a minus sign right there. console says undefined
+      
+      console.log(product2.rating.count);
+      product2.fun();
+
+      console.log(typeof console.log);
+
+      console.log(JSON.stringify(product2)); //JSON.stringify(); turns javascript object into JSON. the result is a string
+
+      const jsonString = JSON.stringify(product2);
+      console.log(JSON.parse(jsonString)); //JSON.parse(); turns JSON to javascript object.
+      */
+
+      console.log('hello'.length); //console says 5
+      console.log('hello'.toUpperCase());
+
+      const object1 = {
+        message: 'hello',
+        price: 799
+      };
+      const object2 = object1; //THIS DOES NOT MAKE A COPY OF THE OBJECT. IT IS A COPY BY REFERENCE!!!
+
+      object1.message = 'Good job!'; //we can change what message points to even though the object is const
+      console.log(object1); //console says 'Good job!'
+      console.log(object2); //console says 'Good job!' even though we only changed object1
+
+      const object3 = {
+        message: 'Good job!',
+        price: 799
+      };
+      console.log(object1 === object3); //console says false even though all values inside objects are the same.
+      // THis compares REFERENCES not the values inside. false because two different references
+
+      // const message = object1.message; The shortcut for it is the following
+      const { message, price: cost } = object1;
+      console.log(message); //console says Good job!
+      console.log(cost); //console says 799
+
+
+
+      const object4 = {
+        // message: message, THE SHORTCUT FOR THIS IS THE FOLLOWING
+        message,
+
+        // method: function function1() {
+        //   console.log('asdasd');
+        // },  THE SHORTCUT FOR THIS IS THE FOLLOWING
+
+        // method: function() {
+        //   console.log('asdasd');
+        // },  THE SHORTCUT FOR THIS IS THE FOLLOWING
+        
+        method() {
+          console.log('hello');
+        }
+      };
+    </script>
+  </body>
+</html>

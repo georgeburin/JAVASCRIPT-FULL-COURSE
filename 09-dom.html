@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>DOM</title>
+  </head>
+  <body>
+    <button>hello</button>
+    <button class="js-button">Second button</button>
+
+    <script>
+      //document.body.innerHTML = 'hello';
+      //document.title = 'good job!';
+
+      console.log(document.querySelector('button').innerHTML);
+      document.querySelector('button')
+        .innerHTML = 'Changed';
+
+      const buttonElement = document.querySelector('.js-button');    //WE CAN SELECT ANY HTML ELEMENT
+      // WITH querySelector()!!! .js-button is a class that we can target and change its innerHTML
+      console.log(buttonElement);
+      
+
+      /*
+      console.log(document.title);
+      document.title = 'Changed';
+
+      console.log(document.body);
+      console.log(typeof document.body);
+
+      console.log(document.body.innerHTML);
+      document.body.innerHTML = '<button>Good job!</button>';
+      */
+      
+
+      /*
+      document.body.innerHTML = 'hello';
+      document.title = 'Good job!';
+      */
+    </script>
+  </body>
+</html>

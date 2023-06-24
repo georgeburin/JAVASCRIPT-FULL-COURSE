@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>DOM Projects</title>
+  </head>
+  <body>
+    <p>YouTube Subscribe Button</p>
+    <button onclick="
+      subscribe();
+    " class="js-subscribe-button">
+      Subscribe
+    </button>
+
+    <p>Amazon Shipping Calculator</p>
+    <input placeholder="Cost of order" class="js-cost-input" onkeydown="
+    //run this function every time you press a key like 4, 5, enter...
+    //we are passing this onkeydown event to the function
+      handleCostKeydown(event);
+    ">
+    <button onclick="
+      calculateTotal();
+    ">Calculate</button>
+    <p class="js-total-cost"></p>
+
+    <script>
+      String(25); // convert number to string
+      console.log('25' - 5); // console says 20 because '25' is automatically converted to a number
+      //same for / * but not for + !!!
+      console.log('25' + 5); // console says 255. 
+
+      window.document
+      window.console.log('window');
+      window.alert
+
+      function handleCostKeydown(event) { //event is the onkeydown, wouldnt work without it
+        //because this function is ran every time we put the key we are looking for enter
+        if (event.key === 'Enter') {
+          calculateTotal();
+        }
+      }
+
+      function calculateTotal() {
+        const inputElement = document.querySelector('.js-cost-input');
+        let cost = Number(inputElement.value); // Number() turns string into a number
+
+        if (cost < 40) {
+          cost = cost + 10;
+        }
+
+        document.querySelector('.js-total-cost')
+          .innerHTML = `$${cost}`;
+      }
+
+      function subscribe() {
+        const buttonElement = document.querySelector('.js-subscribe-button');
+
+        if (buttonElement.innerText === 'Subscribe') {
+          buttonElement.innerHTML = 'Subscribed';
+        } else {
+          buttonElement.innerHTML = 'Subscribe';
+        }
+      }
+      
+    </script>
+  </body>
+</html>
